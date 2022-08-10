@@ -5,8 +5,8 @@
       {{ category.category_desc.name }}
       </h2>
       <div class="flex">
-        <div class="product_box" v-for="product in category.products">
-          x
+        <div  v-for="product in category.products">
+          <ProductBox :directory="category.category_desc.directory" :product="product"/>
         </div>
       </div>
     </div>
@@ -16,8 +16,10 @@
 <script>
 import { useProductsStore } from '../stores/products'
 import { mapState } from 'pinia'
+import ProductBox from '@/components/ProductBox.vue';
 export default {
   name: 'ProductList',
+  components:{ProductBox},
   props: {
     msg: String,
   },
@@ -72,13 +74,7 @@ export default {
     display:flex;
     flex-wrap:wrap;
     gap:10px;
-    .product_box{
-    width:300px;
-    height:150px;
-    background-color: white;
-    border-radius: 6px;
-    z-index:2;
-  }
+    z-index:10;
   }
   
 }

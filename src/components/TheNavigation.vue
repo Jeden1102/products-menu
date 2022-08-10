@@ -88,10 +88,10 @@ export default {
   gap:20px;
   position:relative;
   .navigation-box{
-    padding:10px;
+  padding:10px;
   width:120px;
   height:140px;
-  z-index:2;
+  z-index:221;
   background-color: #bde0fe;
   transition: .2s;
   &:hover{
@@ -126,7 +126,7 @@ export default {
 }
 .navigation-container--sticky{
   margin:0;
-  z-index:5;
+  z-index:25;
   background-color: white;
   position:fixed;
   align-items: center;
